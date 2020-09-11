@@ -414,7 +414,7 @@ __mod_name__ = "SP"
 WARN_HANDLER = DisableAbleCommandHandler("sp", warn_user, pass_args=True, filters=Filters.group)
 RESET_WARN_HANDLER = DisableAbleCommandHandler("resetsp", reset_warns, pass_args=True, filters=Filters.group)
 CALLBACK_QUERY_HANDLER = CallbackQueryHandler(button, pattern=r"rm_warn")
-MYWARNS_HANDLER = DisableAbleDisableAbleCommandHandler(["ceksp", "splist"], warns, pass_args=True, filters=Filters.group)
+MYWARNS_HANDLER = DisableAbleCommandHandler(["ceksp", "splist"], warns, pass_args=True, filters=Filters.group)
 ADD_WARN_HANDLER = DisableAbleCommandHandler("addsp", add_warn_filter, filters=Filters.group)
 RM_WARN_HANDLER = DisableAbleCommandHandler(["nosp", "stopsp"], remove_warn_filter, filters=Filters.group)
 LIST_WARN_HANDLER = DisableAbleCommandHandler("spfilters", list_warn_filters, filters=Filters.group, admin_ok=True)
