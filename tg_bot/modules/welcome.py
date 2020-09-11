@@ -514,22 +514,22 @@ __help__ = """
  - /cleanwelcome <on/off>: On new member, try to delete the previous welcome message to avoid spamming the chat.
  - /clearjoin <on/off>: when someone joins, try to delete the *user* joined the group message.
  - /welcomehelp: view more formatting information for custom welcome/goodbye messages.
-
+ 
 """.format(WELC_HELP_TXT)
 
 __mod_name__ = "Welcomes/Goodbyes"
 
 NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members, new_member)
 LEFT_MEM_HANDLER = MessageHandler(Filters.status_update.left_chat_member, left_member)
-WELC_PREF_HANDLER = DisableAbleCommandHandler("welcome", welcome, pass_args=True, filters=Filters.group)
-GOODBYE_PREF_HANDLER = DisableAbleCommandHandler("goodbye", goodbye, pass_args=True, filters=Filters.group)
-SET_WELCOME = DisableAbleCommandHandler("setwelcome", set_welcome, filters=Filters.group)
-SET_GOODBYE = DisableAbleCommandHandler("setgoodbye", set_goodbye, filters=Filters.group)
-RESET_WELCOME = DisableAbleCommandHandler("resetwelcome", reset_welcome, filters=Filters.group)
-RESET_GOODBYE = DisableAbleCommandHandler("resetgoodbye", reset_goodbye, filters=Filters.group)
-CLEAN_WELCOME = DisableAbleCommandHandler("cleanwelcome", clean_welcome, pass_args=True, filters=Filters.group)
-DEL_JOINED = DisableAbleCommandHandler("clearjoin", del_joined, pass_args=True, filters=Filters.group)
-WELCOME_HELP = DisableAbleCommandHandler("welcomehelp", welcome_help)
+WELC_PREF_HANDLER = CommandHandler("welcome", welcome, pass_args=True, filters=Filters.group)
+GOODBYE_PREF_HANDLER = CommandHandler("goodbye", goodbye, pass_args=True, filters=Filters.group)
+SET_WELCOME = CommandHandler("setwelcome", set_welcome, filters=Filters.group)
+SET_GOODBYE = CommandHandler("setgoodbye", set_goodbye, filters=Filters.group)
+RESET_WELCOME = CommandHandler("resetwelcome", reset_welcome, filters=Filters.group)
+RESET_GOODBYE = CommandHandler("resetgoodbye", reset_goodbye, filters=Filters.group)
+CLEAN_WELCOME = CommandHandler("cleanwelcome", clean_welcome, pass_args=True, filters=Filters.group)
+DEL_JOINED = CommandHandler("clearjoin", del_joined, pass_args=True, filters=Filters.group)
+WELCOME_HELP = CommandHandler("welcomehelp", welcome_help)
 
 
 dispatcher.add_handler(NEW_MEM_HANDLER)
