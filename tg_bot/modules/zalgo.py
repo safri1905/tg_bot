@@ -32,4 +32,4 @@ def zal(bot: Bot, update: Update, args):
     zalgofied_text = zalgo.zalgo().zalgofy(input_text)
     update.message.reply_text(zalgofied_text)
 
-dispatcher.add_handler(CommandHandler('zal', zal, pass_args=True))
+dispatcher.add_handler(DisableAbleCommandHandler('zal', zal, pass_args=True))
