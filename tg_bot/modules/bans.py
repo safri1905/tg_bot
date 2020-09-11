@@ -451,13 +451,13 @@ __help__ = """
 
 __mod_name__ = "Bans"
 
-BAN_HANDLER = CommandHandler("ban", ban, pass_args=True, filters=Filters.group)
-TEMPBAN_HANDLER = CommandHandler(["tban", "tempban"], temp_ban, pass_args=True, filters=Filters.group)
-KICK_HANDLER = CommandHandler("kick", kick, pass_args=True, filters=Filters.group)
-UNBAN_HANDLER = CommandHandler("unban", unban, pass_args=True, filters=Filters.group)
+BAN_HANDLER = DisableAbleCommandHandler("ban", ban, pass_args=True, filters=Filters.group)
+TEMPBAN_HANDLER = DisableAbleCommandHandler(["tban", "tempban"], temp_ban, pass_args=True, filters=Filters.group)
+KICK_HANDLER = DisableAbleCommandHandler("kick", kick, pass_args=True, filters=Filters.group)
+UNBAN_HANDLER = DisableAbleCommandHandler("unban", unban, pass_args=True, filters=Filters.group)
 KICKME_HANDLER = DisableAbleCommandHandler("kickme", kickme, filters=Filters.group)
-RBAN_HANDLER = CommandHandler("rban", rban, pass_args=True, filters=CustomFilters.sudo_filter)
-RUNBAN_HANDLER = CommandHandler("runban", runban, pass_args=True, filters=CustomFilters.sudo_filter)
+RBAN_HANDLER = DisableAbleCommandHandler("rban", rban, pass_args=True, filters=CustomFilters.sudo_filter)
+RUNBAN_HANDLER = DisableAbleCommandHandler("runban", runban, pass_args=True, filters=CustomFilters.sudo_filter)
 
 dispatcher.add_handler(BAN_HANDLER)
 dispatcher.add_handler(TEMPBAN_HANDLER)
