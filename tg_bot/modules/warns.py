@@ -408,16 +408,16 @@ be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is
 
 __mod_name__ = "Warnings"
 
-WARN_HANDLER = DisableAbleCommandHandler("sp", warn_user, pass_args=True, filters=Filters.group)
-RESET_WARN_HANDLER = DisableAbleCommandHandler("resetsp", reset_warns, pass_args=True, filters=Filters.group)
+WARN_HANDLER = CommandHandler("sp", warn_user, pass_args=True, filters=Filters.group)
+RESET_WARN_HANDLER = CommandHandler("resetsp", reset_warns, pass_args=True, filters=Filters.group)
 CALLBACK_QUERY_HANDLER = CallbackQueryHandler(button, pattern=r"rm_warn")
-MYWARNS_HANDLER = DisableAbleCommandHandler(["splist", "ceksp"], warns, pass_args=True, filters=Filters.group)
-ADD_WARN_HANDLER = DisableAbleCommandHandler("addsp", add_warn_filter, filters=Filters.group)
-RM_WARN_HANDLER = DisableAbleCommandHandler(["nosp", "stopsp"], remove_warn_filter, filters=Filters.group)
+MYWARNS_HANDLER = CommandHandler(["splist", "ceksp"], warns, pass_args=True, filters=Filters.group)
+ADD_WARN_HANDLER = CommandHandler("addsp", add_warn_filter, filters=Filters.group)
+RM_WARN_HANDLER = CommandHandler(["nosp", "stopsp"], remove_warn_filter, filters=Filters.group)
 LIST_WARN_HANDLER = DisableAbleCommandHandler("spfilters", list_warn_filters, filters=Filters.group, admin_ok=True)
 WARN_FILTER_HANDLER = MessageHandler(CustomFilters.has_text & Filters.group, reply_filter)
-WARN_LIMIT_HANDLER = DisableAbleCommandHandler("splimit", set_warn_limit, pass_args=True, filters=Filters.group)
-WARN_STRENGTH_HANDLER = DisableAbleCommandHandler("strongsp", set_warn_strength, pass_args=True, filters=Filters.group)
+WARN_LIMIT_HANDLER = CommandHandler("splimit", set_warn_limit, pass_args=True, filters=Filters.group)
+WARN_STRENGTH_HANDLER = CommandHandler("strongsp", set_warn_strength, pass_args=True, filters=Filters.group)
 
 dispatcher.add_handler(WARN_HANDLER)
 dispatcher.add_handler(CALLBACK_QUERY_HANDLER)
