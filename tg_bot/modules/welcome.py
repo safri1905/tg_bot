@@ -68,7 +68,7 @@ def send(update, message, keyboard, backup_message):
             LOGGER.exception("Could not parse! got invalid url host errors")
         else:
             msg = update.effective_message.reply_text(markdown_parser(backup_message +
-                                                                      "\nNote: An error occured when sending the "
+                                                                      "\nNote: An error occurred when sending the "
                                                                       "custom message. Please update."),
                                                       parse_mode=ParseMode.MARKDOWN)
             LOGGER.exception()
