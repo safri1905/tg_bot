@@ -27,7 +27,7 @@ CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
 # Not async
 def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-        message.reply_text("⚠️ Admin tidak bisa diberi SP")
+        message.reply_text("<b>⚠️ Admin tidak bisa diberi SP</b>")
         return ""
 
     if warner:
@@ -117,7 +117,7 @@ def button(bot: Bot, update: Update) -> str:
                                     chat.title, chat.id, user_member.user.id)
         else:
             update.effective_message.edit_text(
-                "User has already has no warns.".format(mention_html(user.id, user.first_name)),
+                "<b>⚠️ Pengguna sudah tidak memiliki SP</b>".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML)
 
     return ""
@@ -140,7 +140,7 @@ def warn_user(bot: Bot, update: Update, args: List[str]) -> str:
         else:
             return warn(chat.get_member(user_id).user, chat, reason, message, warner)
     else:
-        message.reply_text("⚠️ Pengguna tidak ditemukan")
+        message.reply_text("<b>⚠️ Pengguna tidak ditemukan</b>")
     return ""
 
 
@@ -157,16 +157,17 @@ def reset_warns(bot: Bot, update: Update, args: List[str]) -> str:
 
     if user_id:
         sql.reset_warns(user_id, chat.id)
-        message.reply_text("SP telah direset!")
+        message.reply_text("✅ SP telah direset.")
         warned = chat.get_member(user_id).user
-        return "<b>{}:</b>" \
-               "\n#RESETWARNS" \
-               "\n<b>Admin:</b> {}" \
-               "\n<b>User:</b> {}".format(html.escape(chat.title),
-                                          mention_html(user.id, user.first_name),
-                                          mention_html(warned.id, warned.first_name))
+        return "✉️ #SP_RESET 0️⃣" \
+               "\n<b>• Dari:</b> {} [<code>{}</code>]" \
+               "\n<b>• Untuk:</b> {} [<code>{}</code>]" \
+               "\n<b>• Grup:</b> {} [<code>{}</code>]" \
+               "\n#id{}".format(mention_html(user.id, user.first_name), user.id, 
+                                mention_html(warned.id, warned.first_name), warned.id, 
+                                chat.title, chat.id, warned.id)
     else:
-        message.reply_text("⚠️ Pengguna tidak ditemukan")
+        message.reply_text("<b>⚠️ Pengguna tidak ditemukan</b>")
     return ""
 
 
