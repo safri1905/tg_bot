@@ -34,7 +34,7 @@ def no_longer_afk(bot: Bot, update: Update):
 
     res = sql.rm_afk(user.id)
     if res:
-        update.effective_message.reply_text("🙌 {} kembali dari AFK".format(update.effective_user.first_name))
+        update.effective_message.reply_text("👊 {} kembali dari AFK".format(update.effective_user.first_name))
 
 
 @run_async
@@ -63,7 +63,7 @@ def reply_afk(bot: Bot, update: Update):
                 if not user.reason:
                     res = "🖐 {} sedang AFK".format(fst_name)
                 else:
-                    res = "🖐 {} sedang AFK \n📝 {}".format(fst_name, user.reason)
+                    res = "🖐 {} sedang AFK \n✍ {}".format(fst_name, user.reason)
                 message.reply_text(res)
 
 
