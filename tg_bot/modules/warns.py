@@ -27,7 +27,7 @@ CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
 # Not async
 def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = None) -> str:
     if is_user_admin(chat, user.id):
-        message.reply_text("<b>⚠️ Admin tidak bisa diberi SP</b>")
+        message.reply_text("⚠️ Admin tidak bisa diberi SP")
         return ""
 
     if warner:
@@ -117,7 +117,7 @@ def button(bot: Bot, update: Update) -> str:
                                     chat.title, chat.id, user_member.user.id)
         else:
             update.effective_message.edit_text(
-                "<b>⚠️ Pengguna sudah tidak memiliki SP</b>".format(mention_html(user.id, user.first_name)),
+                "⚠️ Pengguna sudah tidak memiliki SP".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML)
 
     return ""
@@ -140,7 +140,7 @@ def warn_user(bot: Bot, update: Update, args: List[str]) -> str:
         else:
             return warn(chat.get_member(user_id).user, chat, reason, message, warner)
     else:
-        message.reply_text("<b>⚠️ Pengguna tidak ditemukan</b>")
+        message.reply_text("⚠️ Pengguna tidak ditemukan")
     return ""
 
 
@@ -157,7 +157,7 @@ def reset_warns(bot: Bot, update: Update, args: List[str]) -> str:
 
     if user_id:
         sql.reset_warns(user_id, chat.id)
-        message.reply_text("✅ SP telah direset.")
+        message.reply_text("✅ SP telah direset")
         warned = chat.get_member(user_id).user
         return "✉️ #SP_RESET 0️⃣" \
                "\n<b>• Dari:</b> {} [<code>{}</code>]" \
@@ -167,7 +167,7 @@ def reset_warns(bot: Bot, update: Update, args: List[str]) -> str:
                                 mention_html(warned.id, warned.first_name), warned.id, 
                                 chat.title, chat.id, warned.id)
     else:
-        message.reply_text("<b>⚠️ Pengguna tidak ditemukan</b>")
+        message.reply_text("⚠️ Pengguna tidak ditemukan")
     return ""
 
 
@@ -183,7 +183,7 @@ def warns(bot: Bot, update: Update, args: List[str]):
         limit, soft_warn = sql.get_warn_setting(chat.id)
 
         if reasons:
-            text = "This user has {}/{} warnings, for the following reasons:".format(num_warns, limit)
+            text = "Pengguna ini memiliki {}/3 SP, dengan daftar pelanggaran:".format(num_warns)
             for reason in reasons:
                 text += "\n - {}".format(reason)
 
@@ -192,9 +192,9 @@ def warns(bot: Bot, update: Update, args: List[str]):
                 update.effective_message.reply_text(msg)
         else:
             update.effective_message.reply_text(
-                "User has {}/{} warnings, but no reasons for any of them.".format(num_warns, limit))
+                "Pengguna ini memiliki {}/3 SP".format(num_warns))
     else:
-        update.effective_message.reply_text("This user hasn't got any warnings!")
+        update.effective_message.reply_text("Pengguna ini tidak memiliki SP")
 
 
 # Dispatcher handler stop - do not async
@@ -318,17 +318,17 @@ def set_warn_limit(bot: Bot, update: Update, args: List[str]) -> str:
             else:
                 sql.set_warn_limit(chat.id, int(args[0]))
                 msg.reply_text("Updated the warn limit to {}".format(args[0]))
-                return "<b>{}:</b>" \
-                       "\n#SET_WARN_LIMIT" \
-                       "\n<b>Admin:</b> {}" \
-                       "\nSet the warn limit to <code>{}</code>".format(html.escape(chat.title),
-                                                                        mention_html(user.id, user.first_name), args[0])
+                return "\n#SET_SP_LIMIT" \
+                       "\n<b>• Admin:</b> {} [<code>{}</code>]" \
+                       "\n<b>• Grup:</b> {} [<code>{}</code>]" \
+                       "\n<b>• Limit SP diubah ke:</b> <code>{}</code>".format(mention_html(user.id, user.first_name), user.id,
+                                                                               chat.tittle, chat.id, args[0])
         else:
             msg.reply_text("Give me a number as an arg!")
     else:
         limit, soft_warn = sql.get_warn_setting(chat.id)
 
-        msg.reply_text("The current warn limit is {}".format(limit))
+        msg.reply_text("Limit SP = {}".format(limit))
     return ""
 
 
