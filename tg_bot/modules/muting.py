@@ -186,9 +186,9 @@ __help__ = """
 
 __mod_name__ = "Mute"
 
-MUTE_HANDLER = DisableAbleCommandHandler("mute", mute, pass_args=True, filters=Filters.group)
-UNMUTE_HANDLER = DisableAbleCommandHandler("unmute", unmute, pass_args=True, filters=Filters.group)
-TEMPMUTE_HANDLER = DisableAbleCommandHandler(["tmute", "tempmute"], temp_mute, pass_args=True, filters=Filters.group)
+MUTE_HANDLER = CommandHandler("mute", mute, pass_args=True, filters=Filters.group)
+UNMUTE_HANDLER = CommandHandler("unmute", unmute, pass_args=True, filters=Filters.group)
+TEMPMUTE_HANDLER = CommandHandler(["tmute", "tempmute"], temp_mute, pass_args=True, filters=Filters.group)
 
 dispatcher.add_handler(MUTE_HANDLER)
 dispatcher.add_handler(UNMUTE_HANDLER)
