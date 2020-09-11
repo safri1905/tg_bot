@@ -34,12 +34,14 @@ Buat kamu yang mau main game sambil dengerin musik bisa join ke Official Server 
 Werewolfkarta adalah tempat bermain game Werewolf Telegram berbahasa Indonesia.
 » Link Alternatif: @Werewolfkarta
 » Info Event: @Werewolfkartabc
+» Grup Diskusi: [KERATON WEREWOLFKARTA](https://t.me/joinchat/DnzUfEWZGSdOLUH66LWzaw)
 » Feedback: @keluhkesahbot
 
 [🎮 ANSOS](https://t.me/ansosID)
 ANSOS adalah tempat bermain game apapun di Telegram selain game Werewolf.
 » Link Alternatif: @ansosID
 » Info Event: @ansosbc
+» Grup Diskusi: [REKTORAT ANSOS](https://t.me/joinchat/L5EeDVKHbmUUnXNzjTpYkQ)
 » Feedback: @bimbingankonselingbot
 
 [🔰 Werewolf: Achv Hunter🇮🇩](https://t.me/joinchat/DnzUfBY3HQiZthl-iuTefA)
@@ -73,6 +75,7 @@ Untuk info lengkap mengenai donasi kamu bisa menghubungi admin di bawah ini:
 
 [🐺 WEREWOLFKARTA](https://t.me/Werewolfkarta)
 » Admin [Kung](tg://user?id=705587917)
+
 [🎮 ANSOS](https://t.me/ansosID)
 » Admin [Ami](tg://user?id=798039565)
 """
@@ -397,7 +400,7 @@ def donate(bot: Bot, update: Update):
         update.effective_message.reply_text(DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
         if OWNER_ID != 254318997 and DONATION_LINK:
-            update.effective_message.reply_text("Jika ingin memberikan donasi untuk bot ini kamu bisa menggunakan"
+            update.effective_message.reply_text("Jika ingin memberikan donasi untuk bot ini kamu bisa menggunakan "
                                                 "[Paypal]({})".format(DONATION_LINK),
                                                 parse_mode=ParseMode.MARKDOWN)
 
