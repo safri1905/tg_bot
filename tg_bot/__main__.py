@@ -53,10 +53,8 @@ Untuk info donasi klik /donate
 """
 
 HELP_STRINGS = """
-Hai! Nama saya adalah *{}*.
-
 Untuk mendapatkan info dari bot ini kamu bisa menggunakan:
- - /start: Info singkat...
+ - /start: Info singkat
  - /donate: Info donasi
 """
 
