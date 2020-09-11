@@ -322,7 +322,7 @@ def set_warn_limit(bot: Bot, update: Update, args: List[str]) -> str:
                        "\n<b>• Admin:</b> {} [<code>{}</code>]" \
                        "\n<b>• Grup:</b> {} [<code>{}</code>]" \
                        "\n<b>• Limit SP diubah ke:</b> <code>{}</code>".format(mention_html(user.id, user.first_name), user.id, 
-                                                                               chat.tittle, chat.id, args[0])
+                                                                               chat.title, chat.id, args[0])
         else:
             msg.reply_text("Give me a number as an arg!")
     else:
