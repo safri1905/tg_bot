@@ -37,9 +37,8 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
 
     limit, soft_warn = sql.get_warn_setting(chat.id)
     num_warns, reasons = sql.warn_user(user.id, chat.id, reason)
-    if num_warns >= 3:
-        sql.reset_warns(user.id, chat.id)
     if num_warns >= limit:
+        sql.reset_warns(user.id, chat.id)
         if soft_warn:  # kick
             chat.unban_member(user.id)
             reply = "{} warnings, {} has been kicked!".format(limit, mention_html(user.id, user.first_name))
@@ -65,21 +64,23 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
 
     else:
         keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("❌  Batal", callback_data="rm_warn({})".format(user.id))]])
+            [[InlineKeyboardButton("Remove warn", callback_data="rm_warn({})".format(user.id))]])
 
-        reply = "{} [<code>{}</code>] Telah Diberi SP ({} dari 3).".format(mention_html(user.id, user.first_name), 
-                                                                           user.id, num_warns)
+        reply = "{} has {}/{} warnings... watch out!".format(mention_html(user.id, user.first_name), num_warns,
+                                                             limit)
         if reason:
-            reply += "\n<b>Karena:</b> {}".format(html.escape(reason))
+            reply += "\nReason for last warn:\n{}".format(html.escape(reason))
 
-        log_reason = "✉️ #SP ➕" \
-                     "\n<b>• Dari:</b> {} [<code>{}</code>]" \
-                     "\n<b>• Untuk:</b> {} [<code>{}</code>]" \
-                     "\n<b>• Grup:</b> {} [<code>{}</code>]" \
-                     "\n<b>• Karena:</b> {}" \
-                     "\n<b>• Jumlah SP:</b> {}/3" \
-                     "\n#id{}".format(warner_tag, warner.id, mention_html(user.id, user.first_name), 
-                                      user.id, chat.title, chat.id, reason, num_warns, user.id)
+        log_reason = "<b>{}:</b>" \
+                     "\n#WARN" \
+                     "\n<b>Admin:</b> {}" \
+                     "\n<b>User:</b> {}" \
+                     "\n<b>Reason:</b> {}"\
+                     "\n<b>Counts:</b> <code>{}/{}</code>".format(html.escape(chat.title),
+                                                                  warner_tag,
+                                                                  mention_html(user.id, user.first_name), 
+                                                                  reason, num_warns, limit)
+
     try:
         message.reply_text(reply, reply_markup=keyboard, parse_mode=ParseMode.HTML)
     except BadRequest as excp:
@@ -105,16 +106,15 @@ def button(bot: Bot, update: Update) -> str:
         res = sql.remove_warn(user_id, chat.id)
         if res:
             update.effective_message.edit_text(
-                "SP dihapus oleh {}.".format(mention_html(user.id, user.first_name)),
+                "Warn removed by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML)
             user_member = chat.get_member(user_id)
-            return "✉️ #SP_EDIT ✍️" \
-                   "\n<b>• Dari:</b> {} [<code>{}</code>]" \
-                   "\n<b>• Untuk:</b> {} [<code>{}</code>]" \
-                   "\n<b>• Grup:</b> {} [<code>{}</code>]" \
-                   "\n#id{}".format(mention_html(user.id, user.first_name), user.id, 
-                                    mention_html(user_member.user.id, user_member.user.first_name), user_member.user.id
-                                    chat.title, chat.id, user_member.user.id)
+            return "<b>{}:</b>" \
+                   "\n#UNWARN" \
+                   "\n<b>Admin:</b> {}" \
+                   "\n<b>User:</b> {}".format(html.escape(chat.title),
+                                              mention_html(user.id, user.first_name),
+                                              mention_html(user_member.user.id, user_member.user.first_name))
         else:
             update.effective_message.edit_text(
                 "User has already has no warns.".format(mention_html(user.id, user.first_name)),
