@@ -48,23 +48,17 @@ ANSOS adalah tempat bermain game apapun di Telegram selain game Werewolf.
 Bagi kamu yang main game Werewolf cuma buat ngumpulin achievements bisa join ke grup ini.
 » Link Alternatif: @NguliAcip
 
+Untuk info donasi klik /donate
+
 """
 
 HELP_STRINGS = """
+Hai! Nama saya adalah *{}*.
 
-Hello! my name *{}*.
-
-*Main* available commands:
- - /start: Start the bot...
- - /help: help....
- - /donate: To find out more about donating!
- - /settings:
-   - in PM: To find out what SETTINGS you have set....
-   - in a group:
-
-{}
-And the following:
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll of the following commands  / or ! can  be used...\n")
+Untuk mendapatkan info dari bot ini kamu bisa menggunakan:
+ - /start: Info singkat...
+ - /donate: Info donasi
+"""
 
 DONATE_STRING = """
 Halo! Senang mendengar kabar bahwa kamu ingin melakukan donasi. Semua donasi yang diterima akan digunakan untuk kepentingan event grup.
