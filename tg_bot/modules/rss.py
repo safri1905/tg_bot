@@ -220,7 +220,7 @@ __help__ = """
  - /removerss <link>: removes the RSS link from the subscriptions.
  - /rss <link>: shows the link's data and the last entry, for testing purposes.
  - /listrss: shows the list of rss feeds that the chat is currently subscribed to.
-
+ 
 NOTE: In groups, only admins can add/remove RSS links to the group's subscription
 """
 
@@ -233,10 +233,10 @@ job_rss_update = job.run_repeating(rss_update, interval=60, first=60)
 job_rss_set.enabled = True
 job_rss_update.enabled = True
 
-SHOW_URL_HANDLER = DisableAbleCommandHandler("rss", show_url, pass_args=True)
-ADD_URL_HANDLER = DisableAbleCommandHandler("addrss", add_url, pass_args=True)
-REMOVE_URL_HANDLER = DisableAbleCommandHandler("removerss", remove_url, pass_args=True)
-LIST_URLS_HANDLER = DisableAbleCommandHandler("listrss", list_urls)
+SHOW_URL_HANDLER = CommandHandler("xrss", show_url, pass_args=True)
+ADD_URL_HANDLER = CommandHandler("xaddrss", add_url, pass_args=True)
+REMOVE_URL_HANDLER = CommandHandler("xremoverss", remove_url, pass_args=True)
+LIST_URLS_HANDLER = CommandHandler("xlistrss", list_urls)
 
 dispatcher.add_handler(SHOW_URL_HANDLER)
 dispatcher.add_handler(ADD_URL_HANDLER)
