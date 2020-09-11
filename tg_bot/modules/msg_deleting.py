@@ -90,8 +90,8 @@ __help__ = """
 
 __mod_name__ = "Purges"
 
-DELETE_HANDLER = CommandHandler("del", del_message, filters=Filters.group)
-PURGE_HANDLER = CommandHandler("purge", purge, filters=Filters.group, pass_args=True)
+DELETE_HANDLER = CommandHandler("xdel", del_message, filters=Filters.group)
+PURGE_HANDLER = CommandHandler("xpurge", purge, filters=Filters.group, pass_args=True)
 
 dispatcher.add_handler(DELETE_HANDLER)
 dispatcher.add_handler(PURGE_HANDLER)
