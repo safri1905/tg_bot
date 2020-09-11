@@ -18,18 +18,29 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-hai {}, my name is {}! if you have any questions about how to use me please give me /help... 
+Hai {}!
 
-im a group manager bot maintained by  [this person](tg://user?id={}).
+{} adalah Official Bot @Werewolfkarta yang digunakan untuk kepentingan grup @Werewolfkarta dan afiliasi.
 
-My future updates will be put into This Channel - @MarieChechi & My Support Group @InFoTelGroup.
+Bot ini dikelola oleh [admin](tg://user?id={}) yang terafiliasi langsung dengan @DaerahIstimewa.
 
-This is my [Deploy Code](https://heroku.com/deploy?template=https://github.com/TGExplore/Marie-2.0-English),
-you can create clone same like me..
+Kamu bisa menggunakan link di bawah ini untuk bergabung dengan grup afiliasi bot ini:
 
-For more commands click /help...
+• [🎧 DI Werewolfkarta](https://discord.gg/esUNFsH)
+Buat kamu yang mau main game sambil dengerin musik bisa join ke Official Server Discord kami.
+Link Alternatif: discord.gg/esUNFsH
 
-**Keep in mind that any changes you DO do to the source have to be on github, as per the license.**
+• [🐺 WEREWOLFKARTA](https://t.me/Werewolfkarta)
+Werewolfkarta adalah tempat bermain game Werewolf Telegram berbahasa Indonesia.
+Link Alternatif: @Werewolfkarta
+
+• [🎮 ANSOS](https://t.me/ansosID)
+ANSOS adalah tempat bermain game apapun di Telegram selain game Werewolf.
+Link Alternatif: @ansosID
+
+• [🔰 Werewolf: Achv Hunter🇮🇩](https://t.me/joinchat/DnzUfBY3HQiZthl-iuTefA)
+Bagi kamu yang main game Werewolf cuma buat ngumpulin achievements bisa join ke grup ini.
+Link Alternatif: @NguliAcip
 
 """
 
