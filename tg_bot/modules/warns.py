@@ -317,11 +317,11 @@ def set_warn_limit(bot: Bot, update: Update, args: List[str]) -> str:
                 msg.reply_text("The minimum warn limit is 3!")
             else:
                 sql.set_warn_limit(chat.id, int(args[0]))
-                msg.reply_text("Updated the warn limit to {}".format(args[0]))
+                msg.reply_text("Limit SP diubah ke {}".format(args[0]))
                 return "\n#SET_SP_LIMIT" \
                        "\n<b>• Admin:</b> {} [<code>{}</code>]" \
                        "\n<b>• Grup:</b> {} [<code>{}</code>]" \
-                       "\n<b>• Limit SP diubah ke:</b> <code>{}</code>".format(mention_html(user.id, user.first_name), user.id,
+                       "\n<b>• Limit SP diubah ke:</b> <code>{}</code>".format(mention_html(user.id, user.first_name), user.id, 
                                                                                chat.tittle, chat.id, args[0])
         else:
             msg.reply_text("Give me a number as an arg!")
