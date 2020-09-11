@@ -108,12 +108,14 @@ def button(bot: Bot, update: Update) -> str:
                 "Warn removed by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML)
             user_member = chat.get_member(user_id)
-            return "<b>{}:</b>" \
-                   "\n#UNWARN" \
-                   "\n<b>Admin:</b> {}" \
-                   "\n<b>User:</b> {}".format(html.escape(chat.title),
-                                              mention_html(user.id, user.first_name),
-                                              mention_html(user_member.user.id, user_member.user.first_name))
+            return "✉️ #SP_EDIT ✍️" \
+                   "\n<b>• Dari:</b> {} [<code>{}</code>]" \
+                   "\n<b>• Untuk:</b> {} [<code>{}</code>]" \
+                   "\n<b>• Grup:</b> {} [<code>{}</code>]" \
+                   "\n<b>• Jumlah SP:</b> {}/3" \
+                   "\n#id{}".format(mention_html(user.id, user.first_name), user.id, 
+                                    mention_html(user_member.user.id, user_member.user.first_name), user_member.user.id, 
+                                    chat.title, chat.id, num_warns, user_member.user.id)
         else:
             update.effective_message.edit_text(
                 "User has already has no warns.".format(mention_html(user.id, user.first_name)),
