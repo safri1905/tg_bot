@@ -26,21 +26,25 @@ Bot ini dikelola oleh [admin](tg://user?id={}) yang terafiliasi langsung dengan 
 
 Kamu bisa menggunakan link di bawah ini untuk bergabung dengan grup afiliasi bot ini:
 
-• [🎧 DI Werewolfkarta](https://discord.gg/esUNFsH)
+[🎧 DI Werewolfkarta](https://discord.gg/esUNFsH)
 Buat kamu yang mau main game sambil dengerin musik bisa join ke Official Server Discord kami.
-Link Alternatif: discord.gg/esUNFsH
+» Link Alternatif: discord.gg/esUNFsH
 
-• [🐺 WEREWOLFKARTA](https://t.me/Werewolfkarta)
+[🐺 WEREWOLFKARTA](https://t.me/Werewolfkarta)
 Werewolfkarta adalah tempat bermain game Werewolf Telegram berbahasa Indonesia.
-Link Alternatif: @Werewolfkarta
+» Link Alternatif: @Werewolfkarta
+» Info Event: @Werewolfkartabc
+» Feedback: @keluhkesahbot
 
-• [🎮 ANSOS](https://t.me/ansosID)
+[🎮 ANSOS](https://t.me/ansosID)
 ANSOS adalah tempat bermain game apapun di Telegram selain game Werewolf.
-Link Alternatif: @ansosID
+» Link Alternatif: @ansosID
+» Info Event: @ansosbc
+» Feedback: @bimbingankonselingbot
 
-• [🔰 Werewolf: Achv Hunter🇮🇩](https://t.me/joinchat/DnzUfBY3HQiZthl-iuTefA)
+[🔰 Werewolf: Achv Hunter🇮🇩](https://t.me/joinchat/DnzUfBY3HQiZthl-iuTefA)
 Bagi kamu yang main game Werewolf cuma buat ngumpulin achievements bisa join ke grup ini.
-Link Alternatif: @NguliAcip
+» Link Alternatif: @NguliAcip
 
 """
 
