@@ -115,8 +115,9 @@ def button(bot: Bot, update: Update) -> str:
                    "\n<b>• Untuk:</b> {} [<code>{}</code>]" \
                    "\n<b>• Grup:</b> {} [<code>{}</code>]" \
                    "\n<b>• Jumlah SP:</b> {}/3" \
-                   "\n#id{}".format(warner_tag, warner.id, mention_html(user.id, user.first_name), 
-                                    user.id, chat.title, chat.id, num_warns, user.id)
+                   "\n#id{}".format(mention_html(user.id, user.first_name), user.id, 
+                                    mention_html(user_member.user.id, user_member.user.first_name), user_member.user.id 
+                                    chat.title, chat.id, num_warns, user_member.user.id)
         else:
             update.effective_message.edit_text(
                 "User has already has no warns.".format(mention_html(user.id, user.first_name)),
@@ -408,18 +409,18 @@ be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is
  - /strongwarn <on/yes/off/no>: If set to on, exceeding the warn limit will result in a ban. Else, will just kick.
 """
 
-__mod_name__ = "Warnings"
+__mod_name__ = "SP"
 
-WARN_HANDLER = CommandHandler("warn", warn_user, pass_args=True, filters=Filters.group)
-RESET_WARN_HANDLER = CommandHandler(["resetwarn", "resetwarns"], reset_warns, pass_args=True, filters=Filters.group)
+WARN_HANDLER = DisableAbleCommandHandler("sp", warn_user, pass_args=True, filters=Filters.group)
+RESET_WARN_HANDLER = DisableAbleCommandHandler("resetsp", reset_warns, pass_args=True, filters=Filters.group)
 CALLBACK_QUERY_HANDLER = CallbackQueryHandler(button, pattern=r"rm_warn")
-MYWARNS_HANDLER = DisableAbleCommandHandler("warns", warns, pass_args=True, filters=Filters.group)
-ADD_WARN_HANDLER = CommandHandler("addwarn", add_warn_filter, filters=Filters.group)
-RM_WARN_HANDLER = CommandHandler(["nowarn", "stopwarn"], remove_warn_filter, filters=Filters.group)
-LIST_WARN_HANDLER = DisableAbleCommandHandler(["warnlist", "warnfilters"], list_warn_filters, filters=Filters.group, admin_ok=True)
+MYWARNS_HANDLER = DisableAbleDisableAbleCommandHandler(["ceksp", "splist"], warns, pass_args=True, filters=Filters.group)
+ADD_WARN_HANDLER = DisableAbleCommandHandler("addsp", add_warn_filter, filters=Filters.group)
+RM_WARN_HANDLER = DisableAbleCommandHandler(["nosp", "stopsp"], remove_warn_filter, filters=Filters.group)
+LIST_WARN_HANDLER = DisableAbleCommandHandler("spfilters", list_warn_filters, filters=Filters.group, admin_ok=True)
 WARN_FILTER_HANDLER = MessageHandler(CustomFilters.has_text & Filters.group, reply_filter)
-WARN_LIMIT_HANDLER = CommandHandler("warnlimit", set_warn_limit, pass_args=True, filters=Filters.group)
-WARN_STRENGTH_HANDLER = CommandHandler("strongwarn", set_warn_strength, pass_args=True, filters=Filters.group)
+WARN_LIMIT_HANDLER = DisableAbleCommandHandler("splimit", set_warn_limit, pass_args=True, filters=Filters.group)
+WARN_STRENGTH_HANDLER = DisableAbleCommandHandler("strongsp", set_warn_strength, pass_args=True, filters=Filters.group)
 
 dispatcher.add_handler(WARN_HANDLER)
 dispatcher.add_handler(CALLBACK_QUERY_HANDLER)
