@@ -110,11 +110,11 @@ def button(bot: Bot, update: Update) -> str:
             user_member = chat.get_member(user_id)
             return "✉️ #SP_EDIT ✍️" \
                    "\n<b>• Dari:</b> {} [<code>{}</code>]" \
-                   "\n<b>• Untuk:</b> {} [<code>?</code>]" \
+                   "\n<b>• Untuk:</b> {} [<code>{}</code>]" \
                    "\n<b>• Grup:</b> {} [<code>{}</code>]" \
-                   "\n#id?".format(mention_html(user.id, user.first_name), user.id, 
-                                   mention_html(user_member.user.id, user_member.user.first_name), 
-                                   chat.title, chat.id)
+                   "\n#id{}".format(mention_html(user.id, user.first_name), user.id, 
+                                    mention_html(user_member.user.id, user_member.user.first_name), user_member.user.id
+                                    chat.title, chat.id, user_member.user.id)
         else:
             update.effective_message.edit_text(
                 "User has already has no warns.".format(mention_html(user.id, user.first_name)),
