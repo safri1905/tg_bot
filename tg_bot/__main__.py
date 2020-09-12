@@ -392,8 +392,8 @@ def donate(bot: Bot, update: Update):
         update.effective_message.reply_text(DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
         if OWNER_ID != 254318997 and DONATION_LINK:
-            update.effective_message.reply_text("Jika ingin memberikan donasi untuk bot ini kamu bisa menggunakan "
-                                                "[Paypal]({})".format(DONATION_LINK),
+            update.effective_message.reply_text("Jika kamu ingin memberikan donasi untuk bot ini bisa melalui "
+                                                "[Trakteer]({})".format(DONATION_LINK),
                                                 parse_mode=ParseMode.MARKDOWN)
 
     else:
