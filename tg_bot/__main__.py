@@ -26,7 +26,7 @@ Bot ini dikelola oleh [admin](tg://user?id={}) yang terafiliasi langsung dengan 
 
 Kamu bisa menggunakan link di bawah ini untuk bergabung dengan grup afiliasi bot ini:
 
-[🎧 DI Werewolfkarta](https://discord.gg/esUNFsH)
+[🎧 D.I Werewolfkarta](https://discord.gg/esUNFsH)
 Buat kamu yang mau main game sambil dengerin musik bisa join ke Official Server Discord kami.
 » Link Alternatif: discord.gg/esUNFsH
 
@@ -61,7 +61,7 @@ Untuk mendapatkan info dari bot ini kamu bisa menggunakan:
 DONATE_STRING = """
 Halo! Senang mendengar kabar bahwa kamu ingin melakukan donasi. Semua donasi yang diterima akan digunakan untuk kepentingan event grup.
 
-Setelah melakukan donasi kamu akan mendapatkan role Darah Biru beserta seluruh benefit role tersebut di Server Discord [DI Werewolfkarta](https://discord.gg/esUNFsH).
+Setelah melakukan donasi kamu akan mendapatkan role Darah Biru beserta seluruh benefit role tersebut di Server Discord [D.I Werewolfkarta](https://discord.gg/esUNFsH).
 
 Untuk info lengkap mengenai donasi kamu bisa menghubungi admin di bawah ini:
 
