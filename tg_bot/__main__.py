@@ -34,7 +34,7 @@ Buat kamu yang mau main game sambil dengerin musik bisa join ke Official Server 
 Werewolfkarta adalah tempat bermain game Werewolf Telegram berbahasa Indonesia.
 » Link Alternatif: @Werewolfkarta
 » Info Event: @Werewolfkartabc
-» Grup Diskusi: [KERATON WEREWOLFKARTA](https://t.me/joinchat/DnzUfEWZGSdOLUH66LWzaw)
+» Grup Diskusi: [KERATON KARTANAGARAN](https://t.me/joinchat/DnzUfEWZGSdOLUH66LWzaw)
 » Feedback: @keluhkesahbot
 
 [🎮 ANSOS](https://t.me/ansosID)
