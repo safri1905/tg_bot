@@ -69,12 +69,16 @@ RUN_STRINGS = (
 )
 
 SLAP_TEMPLATES = (
-    "{user2} gak berani join jangan sok keras.",
-    "{user2} first blood jangan sok keras.",
+    "{user2} gak berani join jangan sok keras!",
+    "{user2} first blood jangan sok keras!",
     "{user2} join untuk AFK.",
+    "{user2} main mulu menang kagak.",
+    "Aku ramal {user2} next game pasti first blood.",
+    "{user2} cocok banget jadi badrole, soalnya bermuka dua.",
     "{user1} {hits} perut {user2} sekeras-kerasnya.",
+    "{user1} {hits} {user2} di depan rumah Pak RT.",
     "{user1} meminta {item} sebagai mahar kepada {user2}.",
-    "{user2} pergi pagi pulang pagi demi kebeli {item} buat {user1}.",
+    "{user2} rela pergi pagi pulang pagi demi kebeli {item} buat {user1}.",
     "{user2}... Kalau {user1} bilang jadian, jadian ya!",
     "{user2} menyatakan cintanya dengan sepenuh hati, {user1} menolak cintanya dengan sesuka hati.",
     "{user2} ditinggal {user1} pas lagi sayang-sayange."
@@ -84,6 +88,7 @@ ITEMS = (
     "skin mobel lejen",
     "diamond mobel lejen",
     "candi",
+    "akun spotify premium",
 )
 
 THROW = (
@@ -96,6 +101,7 @@ THROW = (
 HIT = (
     "memukul",
     "menendang",
+    "membanting",
 )
 
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
