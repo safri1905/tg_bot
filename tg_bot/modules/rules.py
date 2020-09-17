@@ -95,7 +95,7 @@ def __chat_settings__(chat_id, user_id):
 
 __help__ = """
  - /rules: get the rules for this chat.
-
+ 
 *Admin only:*
  - /setrules <your rules here>: set the rules for this chat.
  - /clearrules: clear the rules for this chat.
@@ -103,9 +103,9 @@ __help__ = """
 
 __mod_name__ = "Rules"
 
-GET_RULES_HANDLER = DisableAbleCommandHandler("rules", get_rules, filters=Filters.group)
-SET_RULES_HANDLER = DisableAbleCommandHandler("setrules", set_rules, filters=Filters.group)
-RESET_RULES_HANDLER = DisableAbleCommandHandler("clearrules", clear_rules, filters=Filters.group)
+GET_RULES_HANDLER = CommandHandler("xrules", get_rules, filters=Filters.group)
+SET_RULES_HANDLER = CommandHandler("xsetrules", set_rules, filters=Filters.group)
+RESET_RULES_HANDLER = CommandHandler("xclearrules", clear_rules, filters=Filters.group)
 
 dispatcher.add_handler(GET_RULES_HANDLER)
 dispatcher.add_handler(SET_RULES_HANDLER)
