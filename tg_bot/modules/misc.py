@@ -88,7 +88,8 @@ ITEMS = (
     "skin mobel lejen",
     "diamond mobel lejen",
     "candi",
-    "akun spotify premium",
+    "premium spotify",
+    "kontrakan",
 )
 
 THROW = (
