@@ -73,7 +73,7 @@ SLAP_TEMPLATES = (
     "{user2} first blood jangan sok keras!",
     "{user2} join untuk AFK.",
     "{user2} main mulu menang kagak.",
-    "Aku ramal {user2} next game pasti first blood.",
+    "Aku ramal, next game {user2} pasti first blood.",
     "{user2} cocok banget jadi badrole, soalnya bermuka dua.",
     "{user1} {hits} perut {user2} sekeras-kerasnya.",
     "{user1} {hits} {user2} di depan rumah Pak RT.",
