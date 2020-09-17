@@ -71,39 +71,14 @@ RUN_STRINGS = (
 SLAP_TEMPLATES = (
     "{user2} gak berani join jangan sok keras.",
     "{user2} first blood jangan sok keras.",
-    "{user2} ditinggal {user1} pas lagi sayang-sayange."
+    "{user2} ditinggal {user1} pas lagi sayang-sayange.",
+    "{user2} meminta {item} sebagai mahar kepada {user1}."
 )
 
 ITEMS = (
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
-    "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+    "skin mobel lejen",
+    "diamond mobel lejen",
+    "candi",
 )
 
 THROW = (
@@ -114,11 +89,8 @@ THROW = (
 )
 
 HIT = (
-    "hits",
-    "whacks",
-    "slaps",
-    "smacks",
-    "bashes",
+    "memukul",
+    "menendang",
 )
 
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
