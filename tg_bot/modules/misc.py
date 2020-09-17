@@ -69,8 +69,8 @@ RUN_STRINGS = (
 )
 
 SLAP_TEMPLATES = (
-    "{user1} gak berani join jangan sok keras.",
-    "{user1} first blood jangan sok keras."
+    "{user2} gak berani join jangan sok keras.",
+    "{user2} first blood jangan sok keras."
 )
 
 ITEMS = (
