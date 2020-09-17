@@ -74,9 +74,9 @@ SLAP_TEMPLATES = (
     "{user2} join untuk AFK.",
     "{user1} {hits} perut {user2} sekeras-kerasnya.",
     "{user1} meminta {item} sebagai mahar kepada {user2}.",
-    "{user2} pergi pagi pulang pagi demi kebeli {item} buat {user1}."
-    "{user2}... Kalau {user1} bilang jadian, jadian ya!"
-    "{user2} menyatakan cintanya dengan sepenuh hati, {user1} menolak cintanya dengan sesuka hati."
+    "{user2} pergi pagi pulang pagi demi kebeli {item} buat {user1}.",
+    "{user2}... Kalau {user1} bilang jadian, jadian ya!",
+    "{user2} menyatakan cintanya dengan sepenuh hati, {user1} menolak cintanya dengan sesuka hati.",
     "{user2} ditinggal {user1} pas lagi sayang-sayange."
 )
 
