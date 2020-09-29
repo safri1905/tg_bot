@@ -69,7 +69,8 @@ RUN_STRINGS = (
 )
 
 SLAP_TEMPLATES = (
-    "Kalau kamu suka sama {user1} bilang dong!",
+    "Kalau kamu naksir sama {user1} bilang dong!",
+    "Cieee {user1}... Slap slap {user2}, naksir ya?",
     "{user2} gak berani join jangan sok keras!",
     "{user2} first blood jangan sok keras!",
     "{user2} join untuk AFK.",
