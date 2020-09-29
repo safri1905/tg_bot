@@ -71,6 +71,7 @@ RUN_STRINGS = (
 SLAP_TEMPLATES = (
     "Kalau kamu naksir sama {user1} bilang dong!",
     "Cieee {user1}... Slap slap {user2}, naksir ya?",
+    "{user1}, kalau rindu {user2} bilang! Jangan malah main slap.",
     "{user2} gak berani join jangan sok keras!",
     "{user2} first blood jangan sok keras!",
     "{user2} join untuk AFK.",
@@ -90,7 +91,7 @@ SLAP_TEMPLATES = (
     "{user2} menyatakan cintanya dengan sepenuh hati, {user1} menolak cintanya dengan sesuka hati.",
     "{user2} ditinggal {user1} pas lagi sayang-sayange.",
     "{user2} mau baperin {user1} malah baper sendiri.",
-    "Heh {user2}! Jangan nakalin {user1}!"
+    "Heh {user2}! Jangan nakalin {user1}!1!1!!"
 )
 
 ITEMS = (
