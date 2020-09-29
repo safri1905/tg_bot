@@ -69,19 +69,27 @@ RUN_STRINGS = (
 )
 
 SLAP_TEMPLATES = (
+    "Kalau kamu suka sama {user1} bilang dong!",
     "{user2} gak berani join jangan sok keras!",
     "{user2} first blood jangan sok keras!",
     "{user2} join untuk AFK.",
     "{user2} main mulu menang kagak.",
-    "Aku ramal, next game {user2} pasti first blood.",
     "{user2} cocok banget jadi badrole, soalnya bermuka dua.",
+    "{user2} lemah banget, gak pernah ketemu bisa sayang.",
+    "{user2} kalau galau suka kosongin DP sama DN.",
+    "{user2} kalau ada apa-apa cerita! Jangan malah pasang DP quotes.",
+    "{user2} balikan enggan, move on tak mau.",
+    "Aku ramal, next game {user2} pasti first blood.",
+    "HP-nya {user2} ada notif cuma pas main ww.",
     "{user1} {hits} perut {user2} sekeras-kerasnya.",
     "{user1} {hits} {user2} di depan rumah Pak RT.",
     "{user1} meminta {item} sebagai mahar kepada {user2}.",
     "{user2} rela pergi pagi pulang pagi demi kebeli {item} buat {user1}.",
     "{user2}... Kalau {user1} bilang jadian, jadian ya!",
     "{user2} menyatakan cintanya dengan sepenuh hati, {user1} menolak cintanya dengan sesuka hati.",
-    "{user2} ditinggal {user1} pas lagi sayang-sayange."
+    "{user2} ditinggal {user1} pas lagi sayang-sayange.",
+    "{user2} mau baperin {user1} malah baper sendiri.",
+    "Heh {user2}! Jangan nakalin {user1}!"
 )
 
 ITEMS = (
