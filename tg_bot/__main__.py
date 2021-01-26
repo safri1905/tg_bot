@@ -37,11 +37,11 @@ Werewolfkarta adalah tempat bermain game Werewolf Telegram berbahasa Indonesia.
 » Grup Diskusi: [KERATON KARTANAGARAN](https://t.me/joinchat/DnzUfEWZGSdOLUH66LWzaw)
 » Feedback: @keluhkesahbot
 
-[🎮 ANSOS](https://t.me/ansosID)
+[🎮 UGM](https://t.me/KampusUGM)
 ANSOS adalah tempat bermain game apapun di Telegram selain game Werewolf.
-» Link Alternatif: @ansosID
-» Info Event: @ansosbc
-» Grup Diskusi: [REKTORAT ANSOS](https://t.me/joinchat/L5EeDVKHbmUUnXNzjTpYkQ)
+» Link Alternatif: @KampusUGM
+» Info Event: @MadingUGM
+» Grup Diskusi: [REKTORAT UGM](https://t.me/joinchat/UoduZdePXn0_Cwxs)
 » Feedback: @bimbingankonselingbot
 
 [🔰 Werewolf: Achv Hunter🇮🇩](https://t.me/joinchat/DnzUfBY3HQiZthl-iuTefA)
@@ -68,7 +68,7 @@ Untuk info lengkap mengenai donasi kamu bisa menghubungi admin di bawah ini:
 [🐺 WEREWOLFKARTA](https://t.me/Werewolfkarta)
 » Admin [Kung](tg://user?id=705587917)
 
-[🎮 ANSOS](https://t.me/ansosID)
+[🎮 UGM](https://t.me/KampusUGM)
 » Admin [Ami](tg://user?id=798039565)
 """
 
